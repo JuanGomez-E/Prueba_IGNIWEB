@@ -71,3 +71,16 @@ async function cargarGrafico(id, nombre) {
 
 obtenerCriptos();
 setInterval(obtenerCriptos, 60000);
+
+
+/* Buscador*/
+
+document.getElementById("searchInput").addEventListener("keyup", function() {
+  let filter = this.value.toLowerCase();
+  let rows = document.querySelectorAll("table tbody tr");
+
+  rows.forEach(row => {
+    let name = row.querySelector("td").textContent.toLowerCase();
+    row.style.display = name.includes(filter) ? "" : "none";
+  });
+});
