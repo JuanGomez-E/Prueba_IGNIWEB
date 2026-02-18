@@ -17,9 +17,14 @@
 </head>
 
 <body>
-
-    
 <h1>📊 Crypto Dashboard</h1>
+
+<input 
+  type="text" 
+  id="searchInput" 
+  placeholder="Buscar criptomoneda..." 
+  style="width: 300px; padding: 8px; margin: 15px 0; border-radius: 5px;"
+>
 
 <table id="cryptoTable">
     <thead>
@@ -33,7 +38,7 @@
     <tbody></tbody>
 </table>
 
-{{-- Charts --}}
+{{-- Chart --}}
 <div class="chart-container">
     <canvas id="priceChart"></canvas>
 </div>
